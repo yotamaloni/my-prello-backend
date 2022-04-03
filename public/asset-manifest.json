@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/static/css/main.135d0cf7.css",
+    "main.js": "/static/js/main.fb24d944.js",
+    "static/media/MochiyPopPOne-Regular.ttf": "/static/media/MochiyPopPOne-Regular.a343480e7534e19d0c78.ttf",
+    "static/media/MaterialIconsOutlined-Regular.ttf": "/static/media/MaterialIconsOutlined-Regular.308b7d5824d35b3fff6a.ttf",
+    "service-worker.js": "/service-worker.js",
+    "static/media/google-icon.png": "/static/media/google-icon.7ed7a5eacbaf54a4ea37.png",
+    "index.html": "/index.html",
+    "main.135d0cf7.css.map": "/static/css/main.135d0cf7.css.map",
+    "main.fb24d944.js.map": "/static/js/main.fb24d944.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.135d0cf7.css",
+    "static/js/main.fb24d944.js"
+  ]
+}
