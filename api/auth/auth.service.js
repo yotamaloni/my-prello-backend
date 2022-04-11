@@ -4,7 +4,6 @@ const logger = require('../../services/logger.service')
 
 
 async function login(username, password) {
-    console.log("🟡 ~ password", password)
     logger.debug(`auth.service - login with username: ${username}`)
 
     const user = await userService.getByUsername(username)
