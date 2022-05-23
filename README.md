@@ -1,4 +1,4 @@
-# My Prello App -  Back Section
+# My Prello App -  Back End Section
 
 ## Author: Yotam Aloni
 
