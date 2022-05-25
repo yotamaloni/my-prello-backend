@@ -21,7 +21,7 @@ app.use(express.static("public"));
 
 if (process.env.NODE_ENV === "production") {
   app.use(express.static(path.resolve(__dirname, "public")));
-} else { 
+} else {
   const corsOptions = {
     origin: [
       "http://127.0.0.1:8080",
@@ -51,5 +51,5 @@ app.get("/**", (req, res) => {
 const logger = require("./services/logger.service");
 const port = process.env.PORT || 3030;
 server.listen(port, () => {
-  logger.info("Server is running on port: " + port);
+  logger.info("Server is running on port " + port);
 });
