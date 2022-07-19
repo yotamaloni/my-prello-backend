@@ -26,11 +26,15 @@ function connectSockets(http, session) {
     });
 
     socket.on("board-update", (board) => {
-      console.log("🟡 ~ board", board)
       console.log(" board-update boardId:", board._id);
       console.log("board-update", socket.boardId);
-      socket.to(socket.boardId).emit("board-update", board);  
+      socket.to(socket.boardId).emit("board-update", board);
       // socket.broadcast.emit("board-update", board); //IF ITS ON - SO DONT USE BOARD-WATCH
+    });
+    socket.on("task-update", (task) => {
+      console.log("🟡 ~ task", task);
+      console.log(" task-update taskId:", task.id);
+      socket.broadcast.emit("task-update", task);
     });
   });
 }
