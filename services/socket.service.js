@@ -24,6 +24,17 @@ function connectSockets(http, session) {
       socket.join(boardId);
       socket.boardId = boardId;
     });
+    socket.on("task-watch", (taskId) => {
+      console.log("board-watch boardId:", taskId);
+
+      if (socket.taskId === taskId) return;
+      if (socket.taskId) {
+        socket.leave(socket.taskId);
+      }
+      socket.join(boardId);
+      socket.boardId = boardId;
+    });
+    
 
     socket.on("board-update", (board) => {
       console.log(" board-update boardId:", board._id);
@@ -32,7 +43,6 @@ function connectSockets(http, session) {
       // socket.broadcast.emit("board-update", board); //IF ITS ON - SO DONT USE BOARD-WATCH
     });
     socket.on("task-update", (task) => {
-      console.log("🟡 ~ task", task);
       console.log(" task-update taskId:", task.id);
       socket.broadcast.emit("task-update", task);
     });
