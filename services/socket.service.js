@@ -26,6 +26,7 @@ function connectSockets(http, session) {
     });
 
     socket.on("board-update", (board) => {
+      console.log("🟡 ~ board", board)
       console.log(" board-update boardId:", board._id);
       console.log("board-update", socket.boardId);
       socket.to(socket.boardId).emit("board-update", board);  
